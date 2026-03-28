@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h2 class="top-text">Welcome {{user}}</h2>
+
+<div class="icon-row">
+
+    <div class="icon-box">🎬<p>Movies</p></div>
+    <div class="icon-box">🚌<p>Buses</p></div>
+    <div class="icon-box">🚆<p>Trains</p></div>
+    <div class="icon-box">🚖<p>Cabs</p></div>
+    <div class="icon-box">🚗<p>Rentals</p></div>
+    <div class="icon-box">🏨<p>Hotels</p></div>
+
+</div>
+
+<div class="subscription-box">
+
+    <div class="sub-icon">💎</div>
+
+    <h3>Subscription: {{sub}}</h3>
+
+    {% if sub == "Free" %}
+        <a href="/subscribe" class="btn primary">Upgrade to Premium</a>
+    {% else %}
+        <p class="premium-text">✅ You are a Premium User</p>
+    {% endif %}
+
+</div>
+<div class="plans-container">
+
+    <div class="plan-card">
+        <h3>Basic</h3>
+        <div class="price">₹99/month</div>
+        <p>Limited access</p>
+        <a href="/subscribe?plan=basic">Choose</a>
+    </div>
+
+    <div class="plan-card">
+        <h3>Standard</h3>
+        <div class="price">₹199/month</div>
+        <p>More features & discounts</p>
+        <a href="/subscribe?plan=standard">Choose</a>
+    </div>
+
+    <div class="plan-card">
+        <h3>Premium</h3>
+        <div class="price">₹999/month</div>
+        <p>All features + no ads</p>
+        <a href="/subscribe?plan=premium">Choose</a>
+    </div>
+
+</div>
+
+<a href="/logout" class="btn secondary">Logout</a>
+
+</body>
+</html>
