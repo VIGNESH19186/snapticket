@@ -1,0 +1,155 @@
+/* 🌸 BACKGROUND */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    /* ✅ Same background */
+    background: url('/static/SNAPTICKET.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* 📦 LOGIN CONTAINER */
+.container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px 35px 35px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* 🔥 TITLE */
+.container h1 {
+    margin-bottom: 10px;
+}
+
+/* 📄 SUBTEXT */
+.container p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* INPUT */
+input {
+    display: block;
+    width: 280px;
+    margin: 12px auto;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTON */
+.btn {
+    padding: 12px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+/* PRIMARY */
+.primary {
+    background: #c75f71;
+    color: white;
+}
+
+.primary:hover {
+    background: #a94a5c;
+    transform: scale(1.05);
+}
+
+/* SECONDARY */
+.secondary {
+    border: 2px solid #c75f71;
+    color: #c75f71;
+}
+
+.secondary:hover {
+    background: #c75f71;
+    color: white;
+}
+
+/* ============================= */
+/* 🎯 DASHBOARD ICON ROW */
+/* ============================= */
+
+/* 🎯 DASHBOARD ICON ROW (STRAIGHT LINE) */
+.icon-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 120px;
+    flex-wrap: nowrap;   /* ❗ single row */
+}
+
+/* 🔘 MEDIUM ICON */
+.icon-box {
+    font-size: 45px;   /* ✅ medium size */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* TEXT */
+.icon-box p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* LINK */
+.icon-box a {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #c75f71;
+    text-decoration: none;
+}
+
+/* HOVER */
+.icon-box:hover {
+    transform: scale(1.15);
+}
+
+/* ============================= */
+/* 💎 SUBSCRIPTION BOX */
+/* ============================= */
+
+.subscription-box {
+    margin: 50px auto;
+    padding: 30px;
+    width: 380px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.sub-icon {
+    font-size: 80px;
+    margin-bottom: 15px;
+}
+
+/* ============================= */
+/* 📱 MOBILE */
+/* ============================= */
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        top: 65%;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .icon-row {
+        margin-top: 80px;
+    }
+}
