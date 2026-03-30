@@ -1,6 +1,6 @@
 # snapticket
 ## Project Description
-I'm Vignesh currently persuing Btech in Information Technology Data Analytics
+I'm Vignesh currently persuing B.Tech in Information Technology Data Analytics
 
 SnapTicket allows users to:
 - Browse movies bus train hotel and rental vehiicale easily.
