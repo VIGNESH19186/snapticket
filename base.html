@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SnapTicket</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <div class="subscription-box">
+    <h3>💰 Subscription</h3>
+
+    <!-- PLAN 1 -->
+    <form action="/subscribe" method="POST">
+        <input type="hidden" name="plan" value="₹99 / Month">
+        <button class="plan">₹99 / Month</button>
+    </form>
+    <!-- 👉 change value="..." to edit plan -->
+
+    <!-- PLAN 2 -->
+    <form action="/subscribe" method="POST">
+        <input type="hidden" name="plan" value="₹199 / 3 Months">
+        <button class="plan">₹199 / 3 Months</button>
+    </form>
+
+    <!-- PLAN 3 -->
+    <form action="/subscribe" method="POST">
+        <input type="hidden" name="plan" value="₹999 / Year">
+        <button class="plan">₹999 / Year</button>
+    </form>
+
+</div>
+</head>
+
+<body>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
