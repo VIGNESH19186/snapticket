@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SnapTicket</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1 class="page-title">🎟️ SnapTicket</h1>
+
+    <div class="container">
+        <h1>Welcome</h1>
+        <p>Book your event tickets in seconds.</p>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flash">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <a href="{{ url_for('login') }}" class="btn primary">Login</a>
+        <a href="{{ url_for('register') }}" class="btn secondary">Register</a>
+        <br>
+        <a href="{{ url_for('admin_login') }}" class="btn secondary" style="margin-top:20px; font-size:12px;">Admin Login</a>
+    </div>
+
+</body>
+</html>

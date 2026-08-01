@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book {{ category_label }} - SnapTicket</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="topbar">
+        <a href="{{ url_for('dashboard') }}" class="btn secondary">Dashboard</a>
+        <a href="{{ url_for('logout') }}" class="btn secondary">Logout</a>
+    </div>
+
+    <div class="container" style="top: 45%;">
+        <h1>{{ category_icon }} Book {{ category_label }}</h1>
+        <p>Fill in the details below.</p>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flash">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            <input type="text" name="event_name" placeholder="{{ category_label }} name / route" required>
+            <input type="date" name="event_date" required>
+            <input type="number" name="quantity" min="1" value="1" placeholder="Number of tickets/seats" required>
+            <button type="submit" class="btn primary">Confirm Booking</button>
+        </form>
+    </div>
+
+    <div class="table-wrap">
+        <h2>My {{ category_label }} Bookings</h2>
+        {% if bookings %}
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Qty</th>
+                <th>Booked On</th>
+            </tr>
+            {% for b in bookings %}
+            <tr>
+                <td>{{ b['event_name'] }}</td>
+                <td>{{ b['event_date'] }}</td>
+                <td>{{ b['quantity'] }}</td>
+                <td>{{ b['created_at'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>You have no {{ category_label|lower }} bookings yet.</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>

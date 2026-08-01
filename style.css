@@ -1,0 +1,265 @@
+/* 🌸 BACKGROUND */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url('/static/SNAPTICKET.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* 📦 LOGIN CONTAINER */
+.container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px 35px 35px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container h1 {
+    margin-bottom: 10px;
+}
+
+.container p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+input,
+select {
+    display: block;
+    width: 280px;
+    margin: 12px auto;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.btn {
+    padding: 12px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.primary {
+    background: #c75f71;
+    color: white;
+}
+
+.primary:hover {
+    background: #a94a5c;
+    transform: scale(1.05);
+}
+
+.secondary {
+    border: 2px solid #c75f71;
+    color: #c75f71;
+    background: transparent;
+}
+
+.secondary:hover {
+    background: #c75f71;
+    color: white;
+}
+
+.flash {
+    list-style: none;
+    padding: 10px 15px;
+    margin: 0 0 15px 0;
+    border-radius: 10px;
+    background: rgba(199, 95, 113, 0.15);
+    color: #a94a5c;
+    font-size: 13px;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 120px;
+    flex-wrap: nowrap;
+}
+
+.icon-box {
+    font-size: 45px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon-box p {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #333;
+}
+
+.icon-box a {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #c75f71;
+    text-decoration: none;
+}
+
+.icon-box:hover {
+    transform: scale(1.15);
+}
+
+.subscription-box {
+    margin: 50px auto;
+    padding: 30px;
+    width: 380px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.sub-icon {
+    font-size: 80px;
+    margin-bottom: 15px;
+}
+
+.table-wrap {
+    max-width: 700px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+th {
+    color: #a94a5c;
+}
+
+/* TOP BAR (dashboard header) */
+.topbar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.page-title {
+    margin-top: 60px;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* WELCOME HEADING (dashboard) */
+.top-text {
+    margin-top: 40px;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    font-size: 28px;
+}
+
+/* PREMIUM STATUS TEXT */
+.premium-text {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* ============================= */
+/* 💳 SUBSCRIPTION PLAN CARDS */
+/* ============================= */
+.plans-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.plan-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 25px 20px;
+    width: 220px;
+    transition: 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-6px);
+}
+
+.plan-card h3 {
+    margin: 0 0 10px 0;
+    color: #a94a5c;
+}
+
+.plan-card .price {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.plan-card p {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+/* ============================= */
+/* 📱 MOBILE */
+/* ============================= */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        top: 65%;
+    }
+
+    input,
+    select {
+        width: 90%;
+    }
+
+    .icon-row {
+        margin-top: 80px;
+        flex-wrap: wrap;
+    }
+
+    .subscription-box,
+    .table-wrap {
+        width: 85%;
+    }
+
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan-card {
+        width: 80%;
+    }
+}
